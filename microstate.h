@@ -25,10 +25,10 @@ namespace mst {
 
     static const uint8_t nr_of_states = sizeof...(StateTransitions);
 
-    STF<E> state_transitions[nr_of_states];
+    const STF<E> state_transitions[nr_of_states];
 
-    E start_id;
-    E end_id;
+    const E start_id;
+    const E end_id;
 
     int8_t next_transition;
 
@@ -55,7 +55,7 @@ namespace mst {
 
   private:
 
-    int8_t get_idx(E state_id) {
+    int8_t constexpr get_idx(E state_id) const {
       for (uint8_t i = 0; i < nr_of_states; ++i){
         if (state_transitions[i].state_transition_id == state_id) {
           return (int8_t)i;
