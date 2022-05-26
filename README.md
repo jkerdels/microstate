@@ -3,7 +3,7 @@ a micro footprint C++ state machine
 
 This C++ state machine is a header-only "library" that is designed to ease the
 programming of embedded devices. As a typical use case, it supports structuring
-the executing of your code within a single main loop, e.g., you can define 
+the execution of your code within a single main loop, e.g., you can define 
 multiple state machines that each control certain aspects of your device's 
 behavior as if you had multiple threads of execution running in parallel.
 
