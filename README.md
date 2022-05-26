@@ -27,10 +27,10 @@ enum class MyStates {
 int foo;
 
 auto my_state_machine = mst::make_state_machine(
-	MyStates::initial,								// set start state
-	MyStates::return_,								// set return state
+	MyStates::initial,					// set start state
+	MyStates::return_,					// set return state
 
-	mst::make_state(								// define states
+	mst::make_state(					// define states
 		MyStates::inital,
 		[]() -> MyStates {
 			foo = 0;
@@ -52,7 +52,7 @@ auto my_state_machine = mst::make_state_machine(
 // ...
 
 bool perform_counting = false;		// one way to activate a state machine
-									// could be by using global indicators
+					// could be by using global indicators
 
 // ...
 
