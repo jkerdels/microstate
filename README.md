@@ -3,7 +3,7 @@ a micro footprint C++ state machine
 
 This C++ state machine is a header-only "library" that is designed to ease the
 programming of embedded devices. As a typical use case, it supports structuring
-the executing of your code within a single main loop, e.g., you can define 
+the execution of your code within a single main loop, e.g., you can define 
 multiple state machines that each control certain aspects of your device's 
 behavior as if you had multiple threads of execution running in parallel.
 
@@ -27,10 +27,10 @@ enum class MyStates {
 int foo;
 
 auto my_state_machine = mst::make_state_machine(
-	MyStates::initial,								// set start state
-	MyStates::return_,								// set return state
+	MyStates::initial,					// set start state
+	MyStates::return_,					// set return state
 
-	mst::make_state(								// define states
+	mst::make_state(					// define states
 		MyStates::inital,
 		[]() -> MyStates {
 			foo = 0;
@@ -52,7 +52,7 @@ auto my_state_machine = mst::make_state_machine(
 // ...
 
 bool perform_counting = false;		// one way to activate a state machine
-									// could be by using global indicators
+					// could be by using global indicators
 
 // ...
 
